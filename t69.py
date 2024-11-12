@@ -1,8 +1,8 @@
 # tr69.py
-# @package   5GturboAPI
+# @package   SoftBank Mesh API
 # @author    Samy Younsi - NeroTeam Security Labs <samy@neroteam.com>
 # @license   Proprietary License - All Rights Reserved
-# @docs      https://neroteam.com/blog/
+# @docs      https://neroteam.com/blog/softbank-wi-fi-mesh-rp562b
 
 from zeep import Client
 from zeep.transports import Transport
@@ -40,9 +40,8 @@ wsdl = "http://http-fota.softbank.smartgaiacloud.com/bms_iface?wsdl"
 
 client = Client(wsdl=wsdl, transport=transport)
 
-# response = client.service.getDeviceModelList(beginId=0, maxCount=100)
+response = client.service.getDeviceModelList(beginId=0, maxCount=100)
 # response = client.service.getAllKit(accountId=1)
-response = client.service.resetIPDevice(macAddr="B043B5CEF081")
 print(response)
 
 socket.getaddrinfo = original_getaddrinfo

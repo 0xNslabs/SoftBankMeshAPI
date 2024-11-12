@@ -2,7 +2,7 @@
 # @package   SoftBank Mesh API
 # @author    Samy Younsi - NeroTeam Security Labs <samy@neroteam.com>
 # @license   Proprietary License - All Rights Reserved
-# @docs      https://neroteam.com/blog/
+# @docs      https://neroteam.com/blog/softbank-wi-fi-mesh-rp562b
 
 import argparse
 from datetime import datetime
