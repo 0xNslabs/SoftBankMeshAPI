@@ -1,4 +1,4 @@
-# SoftBank Mesh API RP562B Exploits API
+# SoftBank Mesh RP562B - Exploit Wrapper API
 
 ## Overview
 
