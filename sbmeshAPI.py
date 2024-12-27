@@ -23,8 +23,6 @@ from sbmeshEncryption import (
 """
 GET Wi-Fi Credentials - NO AUTH REQUIRED
 """
-
-
 def getWifiCreds(deviceInfo):
     headers = {"Accept-Language": "en-US,en;q=0.5", "Referer": "0_0"}
     url = "http://{}/data/activation.json".format(deviceInfo["mesh_ip"])
@@ -36,8 +34,6 @@ def getWifiCreds(deviceInfo):
 """
 UPDATE Wi-FI configuration - NO AUTH REQUIRED
 """
-
-
 def setWifiCreds(deviceInfo):
     if not deviceInfo["wifi_name"] or not deviceInfo["wifi_password"]:
         raise ValueError(
@@ -66,8 +62,6 @@ def setWifiCreds(deviceInfo):
 """
 Enable Telnet using Remote Code Injection (RCE) - AUTH REQUIRED!
 """
-
-
 def execTelnetRce(deviceInfo):
     if not deviceInfo["mesh_username"] or not deviceInfo["mesh_password"]:
         raise ValueError(
@@ -108,8 +102,6 @@ def getApplogCsrfToken(deviceInfo, headers):
 """
 Login to SB Mesh to get the DK token and session ID
 """
-
-
 def loginRequest(deviceInfo):
     loginCsrfToken = getLoginCsrfToken(deviceInfo)
     hashPass = hexHmacSha256("$1$SERCOMM$", deviceInfo["mesh_password"])
@@ -194,8 +186,6 @@ def getSaltAndEncryptionKey(deviceInfo):
 """
 Load Session ID and Decryption key
 """
-
-
 def loadSessionIDAndDK(deviceInfo):
     session_id, dk = loginRequest(deviceInfo)
     return session_id, dk
